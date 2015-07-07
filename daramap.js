@@ -13,7 +13,7 @@
 			"comarca": [ "Zaragoza" ],
 			"localidad": [ "Zaragoza" ],
             "epoca": [ "0409-1492 Edad Media", "1492-1789 Edad Moderna", "1789- Contemporánea", "1936-1939 Guerra Civil", "1975-1982 Transición", "1978- Democracia", "1982- Autonomía de Aragón" ],
-			"recursos": [ "Documentos", "Fotografías", "Pergaminos", "Mapas y planos",  "Audiovisuales",  "Carteles" ]			
+			"recursos": [ "Documentos", "Fotografías", "Carteles", "Pergaminos", "Mapas y planos",  "Audiovisuales",  "Carteles" ]			
         },
        {   "id": "Archivo Histórico Provincial de Zaragoza",
             "birthLatLng": "41.654486, -0.876418"
