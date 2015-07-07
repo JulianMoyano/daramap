@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DARA Map: Documentos y Archivos de Aragón</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <link rel='stylesheet' href='http://www.simile-widgets.org/styles/common.css' type='text/css' />
+    
+    <link href="daramap.js" type="application/json" rel="exhibit/data" />
+    <link href="daramap.js" type="application/json" rel="exhibit/data" />
+    
+    <!-- Replace the URL here with http://api.simile-widgets.org/exhibit/current/exhibit-api.js -->
+    <script src="http://api.simile-widgets.org/exhibit/current/exhibit-api.js"></script>
+    
+    <!-- Replace the URL here with http://api.simile-widgets.org/exhibit/current/extensions/time/time-extension.js -->
+    <link rel="exhibit-extension" type="text/javascript" href="http://api.simile-widgets.org/exhibit/current/extensions/time/time-extension.js" />
+    
+    <!-- Replace the URL here with http://api.simile-widgets.org/exhibit/current/extensions/map/map-extension.js -->
+    <script src="http://api.simile-widgets.org/exhibit/current/extensions/map/map-extension.js"></script>
+    
+    <link rel='stylesheet' href='styles.css' type='text/css' />
+<style>
+.logo {
+   text-align: center
+}
+.lens-table {
+width: 100%
+}
+.lens-table td {
+   padding: 10px
+}
+</style>
+  </head>
+
+  <body>
+    <table width="20%" border="0" cellpadding="1" cellspacing="1">
+    <tbody>
+        
+    </tbody>
+</table>
+    
+    <div data-ex-role="collection" data-ex-item-types="Archivos"></div>
+    <table id="frame">
+	        <tr>
+            <td id="sidebar">
+			<p style="text-align: center;">&nbsp;<a href="./daramap.html"><img src="./ico.jpg" alt="DARA" /></a></p>
+
+			
+            <div id="exhibit-browse-panel">
+				    <b>Buscar archivos en el mapa:</b>
+                    <div data-ex-role="facet" data-ex-facet-class="TextSearch"></div>
+					 
+                    <hr/>
+					<div data-ex-role="facet" data-ex-expression=".tipo" data-ex-facet-label="Tipo:" data-ex-height="15em"></div>
+                	<div data-ex-role="facet" data-ex-expression=".epoca" data-ex-facet-label="Archivos con fondos destacados de:" data-ex-height="15em"></div>
+					 <div data-ex-role="facet" data-ex-expression=".recursos" data-ex-facet-label="Recursos que ofrece:" data-ex-height="10em"></div>
+								                               
+                    <div class="logo" data-ex-role="logo" data-ex-color="DeepSkyBlue">Hecho con: </div>
+                </div>
+				            </td>
+            <td id="content">
+                            
+                <div class="item" data-ex-role="lens" style="display: none;">
+                    <table class="lens-table">
+                        <tr>
+                            <td><img data-ex-src-content=".imageURL" 
+                            alt="portrait"/></td>
+                            <td>
+                                <a data-ex-href-content=".url"><span data-ex-content=".label"></span></a>
+                             
+                                <div>Época: <span data-ex-content=".epoca"></span></div>
+								 <div>Tipo: <span data-ex-content=".tipo"></span></div>
+								 <div>Localidad: <span data-ex-content=".localidad"></span></div>
+								   <div>Provincia: <span data-ex-content=".provincia"></span></div>
+								     <div>Comarca: <span data-ex-content=".comarca"></span></div>
+                                                               
+                                <div data-ex-control="item-link"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div data-ex-role="coordinator" id="Archivos"></div>
+                
+             
+                    
+                <div data-ex-role="viewPanel" data-ex-initial-view="0"                         data-ex-formats="date { mode: medium; show: date }"
+>
+                    <div class="map-lens" data-ex-role="lens" style="display: none;">
+                        <div><img data-ex-src-content=".imageURL2" width="100" height="128" alt="DARA: Documentos y Archivos de Aragón" /></div>
+                        <strong><div data-ex-content=".label"></div></strong>
+						<div data-ex-content=".localidad"></div>
+						<div data-ex-content=".texto"></div>					   
+						<a data-ex-href-content=".url" target="_blank">Búsqueda avanzada</a>
+						<div><a data-ex-href-content=".url2" target="_blank">Web institucional</a></div>
+				
+                    </div>
+
+                    <div data-ex-role="view"
+                        data-ex-view-class="Map"
+                        data-ex-label="Archivos en DARA"
+						data-ex-mapheight="130"
+                        data-ex-latlng=".birthLatLng"
+                        data-ex-center="41.6483,-0.8864"
+                        data-ex-zoom="7"
+                        data-ex-bubble-width="200"
+                        data-ex-icon=".imageURL"
+                        data-ex-shape-width="60"
+                        data-ex-shape-height="60"
+                        data-ex-select-coordinator="Archivos"
+						                        >
+                    </div>
+                    
+                    <div data-ex-role="view"
+                        data-ex-view-class="Tabular"
+                        data-ex-label="Detalles"
+                        data-ex-columns=".label, .url2, .localidad, .comarca, .provincia"
+                        data-ex-column-labels="Archivos, www, Localidad, Comarca, Provincia"
+                        data-ex-formats="list { separator: ', ' ; last-separator : ' y ' ; pair-separator : ' y ' } date { template: 'yyyy'; show: date }"                       
+						data-ex-sort-column="10"
+                        data-ex-sort-ascending="false"
+                        data-ex-paginate="true"
+                        data-ex-page-size="30"
+                        >
+                        <table style="display: none;">
+                            <tr data-ex-background-style-content="if(exists(.death), '#ccc', 'white')">
+                               
+							  <td><b data-ex-content=".label"></b><br/><img data-ex-src-content=".imageURL2" alt="portrait"/></td>
+                        	  <td><a data-ex-href-content=".url2"><strong>Web</strong></a></span></td>  
+						<td><span data-ex-content=".localidad"></span></td> 						
+						<td><span data-ex-content=".comarca"></span> </td>			
+														<td><span data-ex-content=".provincia"></span> </td>	
+                              
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+			<span style="font-size: medium;"><span style="font-family: Arial;"><span style="color: rgb(2, 55, 131);"><span style="text-align: justify;">DARA map</span></span></span></span><strong><span style="font-size: medium;"><span style="font-family: Arial;"><span style="color: rgb(2, 55, 131);"><span style="text-align: justify;"> </span></span></span></span></strong><span style="font-size: medium;"><span style="font-family: Arial;"><span style="color: rgb(2, 55, 131);"><span style="text-align: justify;">ofrece un mapa interactivo con las instituciones participantes en&nbsp;</span></span></span></span><a href="http://www.sipca.es/dara" target="_blank" style="text-align: justify;"><strong><span style="font-size: medium;"><span style="font-family: Arial;"><span style="color: rgb(2, 55, 131);">DARA Documentos y Archivos de Arag&oacute;n.</span></span></span></strong></a><p>
+				<table width="100%" border="0" cellpadding="1" cellspacing="1">
+    <tbody>
+        <tr>
+            <td><div data-ex-role="facet" data-ex-expression=".localidad" data-ex-facet-label="Localidad:" data-ex-height="20em"></div><span class="Apple-tab-span" style="white-space:pre">	</span></td>
+            <td><div data-ex-role="facet" data-ex-expression=".comarca" data-ex-facet-label="Comarca:" data-ex-height="20em"></div></td>
+            <td><div data-ex-role="facet" data-ex-expression=".provincia" data-ex-facet-label="Provincia:" data-ex-height="20em"></div></td>
+        </tr>
+    </tbody>
+</table>
+				
+				
+					
+					
+<p>&nbsp;</p>
+            </td>
+        </tr>
+    </table>
+  </body>
+</html>
