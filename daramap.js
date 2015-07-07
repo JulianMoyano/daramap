@@ -1,6 +1,6 @@
 {
     "items": [
-        {   "label": "Archivo Histórico Provincial de Zaragoza",
+        {   "label": "Archivo Histórico Provincial Zaragoza",
             "type": "Archivos",
              "index": 1,
              "imageURL": "./AHPZlogo.jpg",
