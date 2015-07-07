@@ -9,7 +9,7 @@
 			"url": "http://dara.aragon.es/opac/app/advanced/ahpz",
 			"url2": "http://www.patrimonioculturaldearagon.es/archivo-historico-provincial-de-zaragoza",
 			"tipo": [  "1.1 Público", "2.2 Histórico", "3.3 Provincial" ],
-			"provincia": [ "Zaragoza23" ],
+			"provincia": [ "Zaragoza" ],
 			"comarca": [ "Zaragoza" ],
 			"localidad": [ "Zaragoza" ],
             "epoca": [ "0409-1492 Edad Media", "1492-1789 Edad Moderna", "1789- Contemporánea", "1936-1939 Guerra Civil", "1975-1982 Transición", "1978- Democracia", "1982- Autonomía de Aragón" ],
