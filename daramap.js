@@ -882,9 +882,6 @@
        {   "id": "Ayuntamiento de Salas Altas",
             "birthLatLng": "42.1147056,0.0714853"
         },
-       {   "id": "Ayuntamiento de Peralta de Alcofea",
-            "birthLatLng": "41.9311465,-0.0668648"
-        },
 {   "label": "Ayuntamiento de Tamarite de Litera",
             "type": "Archivos",
              "index": 50,
